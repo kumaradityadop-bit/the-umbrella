@@ -1,26 +1,20 @@
-# THE UMBRELLA — website starter
+# Kumar Aditya — Visual Painter
 
-A lightweight, responsive website built with plain HTML, CSS and JavaScript. It has no build step, package manager, external font, analytics, tracking, plugin or API dependency.
+A lightweight personal website for Kumar Aditya, built with plain HTML, CSS and JavaScript. It presents cinema as one part of a wider practice across visual art, consciousness and human experience. The site has no build step, package manager, external font, analytics, tracker, plugin or API dependency.
 
-## Preview
+## Preview locally
 
-Open `index.html` in a browser. All styling and interactions are local.
+Open `index.html` in a browser. The production photographs are stored in `assets/` and load locally.
 
-## Before publishing
+## Publish
 
-- Confirm the selected portfolio photographs are cleared for public use.
-- Confirm the contact address and update the Connect section.
-- Replace any venture descriptions that need to be more specific.
-- Confirm the public wording and name attribution.
+This repository is configured for GitHub Pages from the `main` branch and `/ (root)` folder:
 
-The cinema profile, experience counts, selected credits and profile links are based on information supplied by Kumar Aditya. The collaborator names and roles are transcribed from the supplied Production Team deck. Review public credits and names before launch.
+https://kumaradityadop-bit.github.io/the-umbrella/
 
-## Free GitHub Pages publishing
+To update the site, replace the relevant files in this repository and commit the changes. GitHub Pages will rebuild from the latest commit.
 
-1. Create a new public GitHub repository for the website.
-2. Add `index.html`, `styles.css`, `script.js` and this README at the repository root.
-3. In the repository, open **Settings → Pages**.
-4. Choose **Deploy from a branch**, then select the `main` branch and `/ (root)` folder.
-5. Save and wait for GitHub Pages to show the published address.
+## Before sharing widely
 
-No account access or publishing changes are made by this starter. Domain availability and GitHub Pages settings should be checked in your account when you are ready.
+- Review all public credits, partner names, and portfolio photographs.
+- Add or change contact details whenever you want to publish a direct address.

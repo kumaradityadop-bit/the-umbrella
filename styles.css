@@ -61,7 +61,7 @@
 .header-art::before,.header-art::after{content:"";position:absolute;z-index:2;pointer-events:none;inset:7px 12px;border:1px solid rgba(246,213,158,.72)}
 .header-art::after{inset:11px 16px;border-color:rgba(10,9,7,.72)}
 .site-header>.wordmark,.site-header>.menu-toggle,.site-header>.site-nav{position:relative;z-index:2}
-.header-card-layer{inset:-3% -2%;z-index:0;opacity:.76;mix-blend-mode:normal;background-image:linear-gradient(90deg,rgba(14,10,6,.06) 0%,rgba(10,9,7,.1) 52%,rgba(4,4,3,.28) 100%),url("director-card-full.jpeg");background-size:100% 100%,100% auto;background-position:center,center 50%;mask-image:none;animation:header-card-drift 28s ease-in-out infinite alternate}
+.header-card-layer{inset:-3% -2%;z-index:0;opacity:.88;mix-blend-mode:normal;background-image:linear-gradient(90deg,rgba(14,10,6,.12) 0%,rgba(10,9,7,.08) 52%,rgba(4,4,3,.2) 100%),url("director-header-clean.jpeg");background-size:100% 100%,100% auto;background-position:center,center 45%;mask-image:none;animation:header-card-drift 28s ease-in-out infinite alternate}
 .header-cloud-wave{z-index:1;inset:-50% -10%;opacity:.15;filter:blur(18px)}
 .header-cloud-wave-one{animation:header-cloud-pass 17s ease-in-out infinite alternate}
 .header-cloud-wave-two{inset:-60% -12%;opacity:.1;filter:blur(26px);animation:header-cloud-pass 23s ease-in-out infinite alternate-reverse}
@@ -71,5 +71,5 @@
 .hero-kicker{color:var(--muted);text-shadow:0 1px 16px rgba(0,0,0,.82)}
 .hero-copy{color:#c0bdb5;text-shadow:0 1px 16px rgba(0,0,0,.82)}
 .hero .text-link{color:var(--paper);border-color:var(--line);text-shadow:0 1px 16px rgba(0,0,0,.82)}
-@media(max-width:760px){.site-header{height:84px}.header-art::before{inset:5px 6px}.header-art::after{inset:9px 10px}.header-card-layer{inset:-2% -4%;background-position:center,center 46%;opacity:.74}.header-cloud-wave{inset:-65% -28%;opacity:.14}.header-cloud-wave-two{opacity:.09}}
+@media(max-width:760px){.site-header{height:84px}.header-art::before{inset:5px 6px}.header-art::after{inset:9px 10px}.header-card-layer{inset:-2% -4%;background-position:center,center 42%;opacity:.88}.header-cloud-wave{inset:-65% -28%;opacity:.14}.header-cloud-wave-two{opacity:.09}}
 @media(prefers-reduced-motion:reduce){.header-card-layer,.header-cloud-wave{animation:none!important}.header-cloud-wave{opacity:.1}}

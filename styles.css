@@ -38,3 +38,19 @@
 @keyframes hero-ink-veil{0%,58%{opacity:1}100%{opacity:0;visibility:hidden}}
 @media(max-width:760px){.hero-cinema-light{inset:-8%;opacity:.52;animation-duration:20s}.hero-ink-reveal{animation-duration:1.45s}.hero-ink-cutout{animation-duration:1.3s}}
 @media(prefers-reduced-motion:reduce){.hero::before,.hero-cinema-light,.hero-ink-reveal,.hero-ink-cutout{animation:none!important}.hero-ink-reveal{display:none!important}}
+
+/* Gold-toned business-card artwork blended into the hero */
+.hero-card-layer{position:absolute;z-index:1;inset:0;pointer-events:none;background-image:linear-gradient(105deg,rgba(225,183,116,.36) 0%,rgba(190,139,66,.22) 52%,rgba(4,4,3,.62) 100%),url("director-card-front.jpeg");background-position:center,center 47%;background-size:cover;opacity:.78;mix-blend-mode:screen;mask-image:linear-gradient(180deg,#000 0%,#000 72%,transparent 100%);animation:hero-card-float 28s ease-in-out infinite alternate;will-change:transform,opacity}
+.hero-cloud-wave{position:absolute;z-index:2;inset:-22% -12%;pointer-events:none;opacity:.24;mix-blend-mode:screen;filter:blur(25px);will-change:transform,opacity;background:radial-gradient(ellipse at 20% 52%,rgba(240,198,128,.54),transparent 35%),radial-gradient(ellipse at 58% 41%,rgba(215,165,91,.36),transparent 30%),radial-gradient(ellipse at 83% 56%,rgba(255,221,166,.32),transparent 27%)}
+.hero-cloud-wave-one{animation:hero-cloud-pass-one 19s ease-in-out infinite alternate}
+.hero-cloud-wave-two{opacity:.16;filter:blur(38px);transform:scale(1.12);background:radial-gradient(ellipse at 36% 62%,rgba(250,219,171,.42),transparent 29%),radial-gradient(ellipse at 72% 31%,rgba(202,151,78,.36),transparent 35%);animation:hero-cloud-pass-two 25s ease-in-out infinite alternate-reverse}
+.hero>*:not(.hero-orbit):not(.hero-card-layer):not(.hero-cloud-wave):not(.hero-cinema-light):not(.hero-ink-reveal){z-index:4}
+.hero-card-layer{z-index:1}.hero-cloud-wave{z-index:2}.hero-cinema-light{z-index:3}.hero-ink-reveal{z-index:5}
+.hero h1{color:#21170d;text-shadow:0 1px 22px rgba(255,230,184,.72)}
+.hero-kicker,.hero-copy,.hero .text-link{color:#302418;text-shadow:0 1px 16px rgba(255,232,192,.85)}
+.hero .text-link{border-color:rgba(48,36,24,.6)}
+@keyframes hero-card-float{from{transform:scale(1.015) translate3d(-.35%,.15%,0);opacity:.67}to{transform:scale(1.06) translate3d(.35%,-.15%,0);opacity:.82}}
+@keyframes hero-cloud-pass-one{from{transform:translate3d(-3%,2%,0) scale(.94);opacity:.13}50%{opacity:.3}to{transform:translate3d(3%,-2%,0) scale(1.08);opacity:.24}}
+@keyframes hero-cloud-pass-two{from{transform:translate3d(2%,3%,0) scale(1.02);opacity:.1}to{transform:translate3d(-3%,-2%,0) scale(1.15);opacity:.22}}
+@media(max-width:760px){.hero-card-layer{background-position:center,54% center;opacity:.68;mask-image:linear-gradient(180deg,#000 0%,#000 78%,transparent 100%)}.hero-cloud-wave{inset:-12% -35%;opacity:.18;filter:blur(28px)}.hero-cloud-wave-two{opacity:.12}.hero h1{color:#24190e;text-shadow:0 1px 18px rgba(255,230,184,.78)}.hero-kicker,.hero-copy,.hero .text-link{color:#362819;text-shadow:0 1px 14px rgba(255,232,192,.9)}}
+@media(prefers-reduced-motion:reduce){.hero-card-layer,.hero-cloud-wave{animation:none!important}.hero-cloud-wave{opacity:.15}}

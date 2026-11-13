@@ -25,3 +25,16 @@
 @media(max-width:760px){.hero::before{background-image:linear-gradient(90deg,rgba(10,11,9,.58),rgba(10,11,9,.24)),linear-gradient(0deg,rgba(10,11,9,.52),transparent 50%,rgba(10,11,9,.28)),url("hero-location-optimized.jpeg");background-position:center,center,58% center}.hero::after{width:95vw;height:95vw;left:55%;top:52%;opacity:.72}}
 @media(hover:none){.hero::after{opacity:.65}}
 @media(prefers-reduced-motion:reduce){.hero::after{transition:none}}
+
+/* Cinematic motion layers: slow image drift, moving haze, and ink reveal */
+.hero::before{animation:hero-camera-drift 24s ease-in-out infinite alternate;will-change:transform}
+.hero-cinema-light{position:absolute;z-index:1;inset:-16%;pointer-events:none;background:radial-gradient(ellipse at 64% 56%,rgba(255,196,113,.2),transparent 30%),radial-gradient(ellipse at 84% 34%,rgba(104,175,185,.14),transparent 23%),linear-gradient(113deg,transparent 38%,rgba(255,217,157,.045) 48%,transparent 59%);mix-blend-mode:screen;filter:blur(10px);opacity:.68;animation:hero-haze-sweep 16s ease-in-out infinite alternate;will-change:transform,opacity}
+.hero-ink-reveal{position:absolute;z-index:2;inset:0;pointer-events:none;background:#050504;animation:hero-ink-veil 1.75s cubic-bezier(.55,0,.22,1) forwards}
+.hero-ink-reveal svg{display:block;width:100%;height:100%}.hero-ink-cutout{transform-box:fill-box;transform-origin:center;animation:hero-ink-spread 1.55s cubic-bezier(.12,.7,.18,1) forwards}
+.hero>*:not(.hero-orbit):not(.hero-cinema-light):not(.hero-ink-reveal){z-index:3}
+@keyframes hero-camera-drift{from{transform:scale(1.015)}to{transform:scale(1.075)}}
+@keyframes hero-haze-sweep{from{transform:translate3d(-2.5%,1%,0) scale(.98);opacity:.42}to{transform:translate3d(2.5%,-1%,0) scale(1.06);opacity:.8}}
+@keyframes hero-ink-spread{from{transform:scale(.001)}to{transform:scale(25)}}
+@keyframes hero-ink-veil{0%,58%{opacity:1}100%{opacity:0;visibility:hidden}}
+@media(max-width:760px){.hero-cinema-light{inset:-8%;opacity:.52;animation-duration:20s}.hero-ink-reveal{animation-duration:1.45s}.hero-ink-cutout{animation-duration:1.3s}}
+@media(prefers-reduced-motion:reduce){.hero::before,.hero-cinema-light,.hero-ink-reveal,.hero-ink-cutout{animation:none!important}.hero-ink-reveal{display:none!important}}

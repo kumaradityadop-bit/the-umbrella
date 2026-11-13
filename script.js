@@ -107,3 +107,18 @@ function playProjectorStart() {
 }
 
 document.querySelector('[data-projector-sound]')?.addEventListener('click', playProjectorStart);
+
+const hero = document.querySelector('.hero');
+if (hero && window.matchMedia('(pointer: fine)').matches) {
+  hero.addEventListener('pointermove', (event) => {
+    if (event.pointerType === 'touch') return;
+    const bounds = hero.getBoundingClientRect();
+    hero.style.setProperty('--light-x', `${event.clientX - bounds.left}px`);
+    hero.style.setProperty('--light-y', `${event.clientY - bounds.top}px`);
+  });
+
+  hero.addEventListener('pointerleave', () => {
+    hero.style.setProperty('--light-x', '50%');
+    hero.style.setProperty('--light-y', '52%');
+  });
+}

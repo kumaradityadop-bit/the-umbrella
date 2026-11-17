@@ -108,6 +108,23 @@ function playProjectorStart() {
 
 document.querySelector('[data-projector-sound]')?.addEventListener('click', playProjectorStart);
 
+const bookSplash = document.querySelector('#book-splash');
+if (bookSplash) {
+  let splashDismissTimer;
+  const dismissBookSplash = () => {
+    if (bookSplash.classList.contains('is-leaving')) return;
+    window.clearTimeout(splashDismissTimer);
+    bookSplash.classList.add('is-leaving');
+    window.setTimeout(() => bookSplash.remove(), 650);
+  };
+
+  bookSplash.querySelector('.book-splash-close')?.addEventListener('click', dismissBookSplash);
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && document.body.contains(bookSplash)) dismissBookSplash();
+  });
+  splashDismissTimer = window.setTimeout(dismissBookSplash, 10000);
+}
+
 const hero = document.querySelector('.hero');
 if (hero && window.matchMedia('(pointer: fine)').matches) {
   hero.addEventListener('pointermove', (event) => {

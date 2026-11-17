@@ -73,3 +73,19 @@
 .hero .text-link{color:var(--paper);border-color:var(--line);text-shadow:0 1px 16px rgba(0,0,0,.82)}
 @media(max-width:760px){.site-header{height:84px}.header-art::before{inset:5px 6px}.header-art::after{inset:9px 10px}.header-card-layer{inset:-2% -4%;background-position:center,center 42%;opacity:.88}.header-cloud-wave{inset:-65% -28%;opacity:.14}.header-cloud-wave-two{opacity:.09}}
 @media(prefers-reduced-motion:reduce){.header-card-layer,.header-cloud-wave{animation:none!important}.header-cloud-wave{opacity:.1}}
+
+/* Brief opening announcement for Chalchitra Ki Kathayein */
+.book-splash{position:fixed;z-index:2147483000;inset:0;display:grid;place-items:center;padding:22px;background:rgba(0,0,0,.94);opacity:1;visibility:visible;transition:opacity .6s ease,visibility .6s ease}
+.book-splash.is-leaving{opacity:0;visibility:hidden;pointer-events:none}
+.book-splash-panel{position:relative;width:min(100%,1000px);display:grid;justify-items:center;gap:13px}
+.book-splash-cover{display:block;width:auto;height:auto;max-width:100%;max-height:69vh;object-fit:contain;box-shadow:0 18px 70px rgba(0,0,0,.6)}
+.book-splash-close{position:absolute;z-index:1;top:10px;right:10px;width:42px;height:42px;border:1px solid rgba(255,255,255,.55);border-radius:50%;background:rgba(0,0,0,.72);color:#fff;font:300 30px/1 sans-serif;cursor:pointer}
+.book-splash-details{width:min(100%,920px);display:flex;align-items:center;justify-content:space-between;gap:22px;color:#f4efe5}
+.book-splash-details h2{margin:0;font-family:Georgia,serif;font-size:clamp(20px,3vw,30px);font-weight:500;letter-spacing:.035em}
+.book-splash-details p{margin:4px 0 0;color:#c3b9a7;font-size:13px;letter-spacing:.08em}
+.book-splash-buy{display:inline-flex;align-items:center;gap:12px;padding:13px 20px;border:1px solid #bc985e;color:#f0d6a6;text-decoration:none;text-transform:uppercase;letter-spacing:.1em;font-size:12px;white-space:nowrap;transition:background .2s ease,color .2s ease}
+.book-splash-buy:hover,.book-splash-buy:focus-visible{background:#bc985e;color:#080705}
+.book-splash-timer{color:rgba(230,222,208,.52);font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+@media(max-width:640px){.book-splash{padding:14px}.book-splash-panel{gap:12px}.book-splash-cover{max-height:62vh;max-width:100%}.book-splash-details{align-items:flex-start;flex-direction:column;gap:13px}.book-splash-buy{padding:12px 16px}.book-splash-close{top:7px;right:7px}}
+@media(max-height:620px){.book-splash-cover{max-height:58vh}.book-splash-panel{gap:8px}}
+@media(prefers-reduced-motion:reduce){.book-splash{transition:none}}

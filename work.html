@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Selected visual work, stories and reflections by Kumar Aditya, Visual Painter and cinematographer.">
+  <title>Selected Work — Kumar Aditya</title>
+  <style>
+    :root { color-scheme: dark; --bg:#000; --fg:#fff; --line:#3c3c3c; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--fg); font-family:Arial, Helvetica, sans-serif; }
+    a { color:inherit; }
+    .wrap { width:min(1240px, calc(100% - 64px)); margin:auto; }
+    header { min-height:88px; display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid var(--line); }
+    .brand { text-decoration:none; font-size:12px; letter-spacing:.16em; text-transform:uppercase; }
+    .nav { display:flex; gap:22px; font-size:11px; color:#fff; letter-spacing:.12em; text-transform:uppercase; }
+    .nav a { text-decoration:none; }
+    main { padding:clamp(72px, 13vw, 168px) 0 110px; }
+    .eyebrow { color:#fff; font-size:11px; letter-spacing:.2em; text-transform:uppercase; }
+    h1 { margin:22px 0 20px; font:400 clamp(56px, 10vw, 132px)/.9 Georgia, 'Times New Roman', serif; letter-spacing:-.055em; }
+    .intro { max-width:540px; margin:0; color:#fff; font:18px/1.6 Georgia, 'Times New Roman', serif; }
+    .rule { margin:70px 0 24px; border:0; border-top:1px solid var(--line); }
+    .work-head { display:flex; justify-content:space-between; align-items:baseline; gap:20px; }
+    h2 { margin:0; font:400 13px Arial, sans-serif; letter-spacing:.18em; text-transform:uppercase; }
+    .count { color:#fff; font-size:11px; letter-spacing:.12em; text-transform:uppercase; }
+    .empty { margin-top:24px; min-height:280px; border:1px solid var(--line); display:grid; place-items:center; text-align:center; padding:36px; }
+    .empty-inner { max-width:510px; }
+    .mark { color:#fff; font:38px Georgia,serif; }
+    .empty h3 { margin:18px 0 10px; font:400 27px Georgia,serif; }
+    .empty p { margin:0 auto 22px; max-width:450px; color:#fff; font-size:14px; line-height:1.65; }
+    .button { display:inline-block; border:1px solid #777267; padding:12px 16px; text-decoration:none; font-size:10px; letter-spacing:.14em; text-transform:uppercase; transition:background .2s,color .2s; }
+    .button:hover,.button:focus-visible { background:#222; color:#fff; }
+    .gallery { margin-top:24px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .tile { display:block; position:relative; overflow:hidden; background:#24231f; color:var(--fg); text-decoration:none; }
+    .tile img { display:block; width:100%; aspect-ratio:1/1; object-fit:cover; filter:saturate(.78); transition:transform .45s,filter .3s; }
+    .tile:hover img,.tile:focus-visible img { transform:scale(1.035); filter:saturate(1); }
+    .tile span { display:flex; justify-content:space-between; gap:10px; padding:13px 2px 8px; color:#fff; font-size:10px; letter-spacing:.1em; text-transform:uppercase; }
+    .source-note { margin:26px 0 0; color:#fff; font-size:12px; line-height:1.6; }
+    .about { margin:clamp(72px, 11vw, 136px) 0 0; }
+    .about-head { display:grid; grid-template-columns:1fr auto; align-items:end; gap:24px; border-bottom:1px solid var(--line); padding-bottom:20px; }
+    .about-title { margin:0; font:400 clamp(42px, 7vw, 82px)/.98 Georgia, 'Times New Roman', serif; letter-spacing:-.045em; }
+    .about-index { color:#fff; font-size:10px; letter-spacing:.18em; text-transform:uppercase; }
+    .about-lead { max-width:830px; margin:36px 0 0; font:400 clamp(24px, 3.4vw, 43px)/1.28 Georgia, 'Times New Roman', serif; }
+    .about-meta { margin:28px 0 0; font-size:11px; line-height:1.8; letter-spacing:.12em; text-transform:uppercase; }
+    .about-copy { display:grid; grid-template-columns:minmax(0, 1fr) minmax(280px, .76fr); gap:clamp(30px, 8vw, 110px); margin:50px 0 0; }
+    .about-copy p { margin:0 0 20px; max-width:660px; color:#fff; font:16px/1.85 Georgia, 'Times New Roman', serif; }
+    .about-book { border-left:1px solid #fff; padding:2px 0 2px 24px; align-self:start; }
+    .about-book-label { margin:0 0 18px; color:#fff; font-size:10px; letter-spacing:.18em; text-transform:uppercase; }
+    .about-book-title { margin:0; font:400 clamp(27px, 3.2vw, 39px)/1.2 Georgia, 'Times New Roman', serif; }
+    .about-book-subtitle { margin:12px 0 0; color:#fff; font:italic 15px/1.6 Georgia, 'Times New Roman', serif; }
+    .philosophy { margin:clamp(58px, 9vw, 108px) 0; padding:clamp(32px, 7vw, 78px) 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .philosophy-label { margin:0 0 22px; color:#fff; font-size:10px; letter-spacing:.2em; text-transform:uppercase; }
+    .philosophy blockquote { max-width:1000px; margin:0; font:400 clamp(33px, 6.5vw, 82px)/1.12 Georgia, 'Times New Roman', serif; letter-spacing:-.035em; }
+    .philosophy blockquote span { font-style:italic; }
+    .philosophy-note { max-width:570px; margin:25px 0 0 auto; color:#fff; font:15px/1.75 Georgia, 'Times New Roman', serif; }
+    .hindi { border-top:1px solid var(--line); padding:38px 0 0; }
+    .hindi h3 { margin:0 0 22px; font:400 clamp(34px, 5vw, 58px)/1.1 Georgia, 'Noto Serif Devanagari', serif; }
+    .hindi p { max-width:880px; margin:0; color:#fff; font:18px/2.05 Georgia, 'Noto Serif Devanagari', serif; }
+    .wa-button svg { width:26px; height:26px; fill:currentColor; }
+    .wa-button:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+    footer { padding:20px 0 32px; border-top:1px solid var(--line); color:#fff; font-size:10px; letter-spacing:.12em; text-transform:uppercase; }
+    @media(max-width:760px) { .gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px} }
+    @media(max-width:700px) { .about-head{grid-template-columns:1fr}.about-index{order:-1}.about-copy{grid-template-columns:1fr}.about-book{max-width:440px}.philosophy-note{margin-left:0} }
+    @media(max-width:600px) { .wrap{width:calc(100% - 36px)} header{min-height:72px;gap:16px}.nav{gap:12px;font-size:9px}main{padding:86px 0 72px}.empty{min-height:250px;padding:25px}.about-lead{margin-top:27px}.about-copy{margin-top:34px}.hindi p{font-size:16px;line-height:1.9} }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <a class="brand" href="#top">Kumar Aditya <span aria-hidden="true">/</span> Visual Painter</a>
+    <nav class="nav" aria-label="Page sections"><a href="index.html#top">Home</a><a href="#about">About</a><a href="#work">Work</a></nav>
+  </header>
+  <main class="wrap" id="top">
+    <div class="eyebrow">Cinematography · Image-making · Story</div>
+    <h1>Selected<br>work<span>.</span></h1>
+    <p class="intro">A collection of moving images and visual stories by Kumar Aditya.</p>
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="about-head"><h2 class="about-title" id="about-title">A life, observed.</h2><span class="about-index">About / 01</span></div>
+      <p class="about-lead">Thinker, storyteller, filmmaker and observer of life's quiet moments.</p>
+      <p class="about-meta">Founder — Sun | Moon &nbsp;·&nbsp; Creator — TUP: The Umbrella Project</p>
+      <div class="about-copy">
+        <div>
+          <p>Born with a camera in hand and philosophy in mind, Kumar Aditya explores how the simplest things — a stray thought, a moment of shelter in rain, an open sky — hold the deepest truths.</p>
+          <p>His work lives at the intersection of cinema, philosophy and everyday life. Through rain, silence and shelter, he writes for those who pause, reflect and still believe in small rays of hope, ordinary magic and quiet courage.</p>
+          <p>His stories don't fix life — they shelter the soul.</p>
+        </div>
+        <aside class="about-book" aria-label="Debut book">
+          <p class="about-book-label">Debut book</p>
+          <h3 class="about-book-title" lang="hi">चलचित्र की कथायें</h3>
+          <p class="about-book-subtitle">Chalchitra Ki Kathayein<br>— The Umbrella Philosophy: Learning Life Through The Lens</p>
+          <p style="margin-top:20px">A collection of stories that finds meaning in the ordinary.</p>
+        </aside>
+      </div>
+      <div class="philosophy">
+        <p class="philosophy-label">The Umbrella Philosophy</p>
+        <blockquote>An umbrella doesn't stop the rain;<br><span>it gives you courage to walk through it.</span></blockquote>
+        <p class="philosophy-note">A quiet belief at the heart of his work: not every story can change the weather, but it can offer shelter while we find our way.</p>
+      </div>
+      <div class="hindi" lang="hi" aria-labelledby="hindi-title">
+        <h3 id="hindi-title">कुमार आदित्य</h3>
+        <p>वह एक चिंतक, कहानीकार और जीवन के सूक्ष्म पलों का प्रेक्षक है। बारिश, मौन और आश्रय के माध्यम से, वह बताते हैं कि कैसे सबसे छोटी चीजें — एक विचार, एक पल का सहारा, खुला आकाश — सबसे गहरे सत्य को समेटे हुए हैं। Sun | Moon के संस्थापक और TUP — The Umbrella Project के निर्माता, कुमार आदित्य की पहली पुस्तक चलचित्र की कथायें साधारण में अर्थ खोजने की उनकी यात्रा है, उन सभी के लिए जो ठहरकर सोचते हैं और आशा की एक किरण पर विश्वास रखते हैं।</p>
+      </div>
+    </section>
+    <hr class="rule" id="work">
+    <div class="work-head"><h2>Work</h2><span class="count">Selected image posts</span></div>
+    <section class="gallery" aria-label="Selected image posts from Kumar Aditya’s LinkedIn gallery">
+      <a class="tile" href="https://www.linkedin.com/in/kumar-aditya-/recent-activity/images/" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://media.licdn.com/dms/image/v2/D5622AQFt_iGYFdH2SA/feedshare-shrink_480/B56aFZtwKWHQAg-/0/1792506528657?e=1795651200&amp;v=beta&amp;t=MM7WdmsTPLelEYiuYm_c2_WY646jeDr2Q2CVCeW843M" alt="Image from Kumar Aditya’s LinkedIn image gallery, 2026"><span><span>Image post</span><span>2026 ↗</span></span></a>
+      <a class="tile" href="https://www.linkedin.com/in/kumar-aditya-/recent-activity/images/" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://media.licdn.com/dms/image/v2/D5622AQGYri2vglp6Vg/feedshare-shrink_480/B56Z5S9Y_iGgAg-/0/1779508285684?e=1795651200&amp;v=beta&amp;t=Zhz6QTgOAz__4bjK47Sm4L3EFlHOx_hWl-00HKlZCf0" alt="Image from Kumar Aditya’s LinkedIn image gallery, 2026"><span><span>Image post</span><span>2026 ↗</span></span></a>
+      <a class="tile" href="https://www.linkedin.com/in/kumar-aditya-/recent-activity/images/" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://media.licdn.com/dms/image/v2/D5622AQGnPBcMh3Khuw/feedshare-shrink_480/B56ZjGYVe3G4AY-/0/1755674929879?e=1795651200&amp;v=beta&amp;t=Um3NHEcRoUsW9hzTOC3qJRU4Q2WPJxRYAHTLI3SopsU" alt="Image from Kumar Aditya’s LinkedIn image gallery, 2025"><span><span>Image post</span><span>2025 ↗</span></span></a>
+      <a class="tile" href="https://www.linkedin.com/in/kumar-aditya-/recent-activity/images/" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://media.licdn.com/dms/image/v2/D5622AQEXZtj5a6Cz2Q/feedshare-shrink_480/B56Zc8bQjNH8AY-/0/1749065473231?e=1795651200&amp;v=beta&amp;t=QYGjwbdgN-Lovj03u8NcLSXvh0CMRv3tzLfHvKZXidk" alt="Image from Kumar Aditya’s LinkedIn image gallery, 2025"><span><span>Image post</span><span>2025 ↗</span></span></a>
+      <a class="tile" href="https://www.linkedin.com/in/kumar-aditya-/recent-activity/images/" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://media.licdn.com/dms/image/v2/D5622AQGlC-lJRT4-Uw/feedshare-shrink_480/feedshare-shrink_480/0/1731953298519?e=1795651200&amp;v=beta&amp;t=dO-kGke6mp64ml9-r_CfEwjyrpv0gyi97b3JUHcRSV8" alt="Image from Kumar Aditya’s LinkedIn image gallery, 2024"><span><span>Image post</span><span>2024 ↗</span></span></a>
+      <a class="tile" href="https://www.linkedin.com/in/kumar-aditya-/recent-activity/images/" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://media.licdn.com/dms/image/v2/D5622AQFylV4mIKTMKA/feedshare-shrink_480/feedshare-shrink_480/0/1730557109242?e=1795651200&amp;v=beta&amp;t=MminokMz4m-cOYvBNQkymY91w_LQpkBs4PmYhXnLnOs" alt="Image from Kumar Aditya’s LinkedIn image gallery, 2024"><span><span>Image post</span><span>2024 ↗</span></span></a>
+      <a class="tile" href="https://www.linkedin.com/in/kumar-aditya-/recent-activity/images/" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://media.licdn.com/dms/image/v2/D5622AQEjg8K9V8xjeA/feedshare-shrink_480/feedshare-shrink_480/0/1727587698888?e=1795651200&amp;v=beta&amp;t=ZOkZgcJVT7bZAgRQoegXMF0A-VCGsWJtr7VYprulLUY" alt="Image from Kumar Aditya’s LinkedIn image gallery, 2024"><span><span>Image post</span><span>2024 ↗</span></span></a>
+      <a class="tile" href="https://www.linkedin.com/in/kumar-aditya-/recent-activity/images/" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://media.licdn.com/dms/image/v2/D5622AQEkWuwu0Rv7Aw/feedshare-shrink_480/feedshare-shrink_480/0/1726219167626?e=1795651200&amp;v=beta&amp;t=Hb-0sF7d1eMwTb8fHxCFr3Wny1tT5HFYLY7_ntwsznk" alt="Image from Kumar Aditya’s LinkedIn image gallery, 2024"><span><span>Image post</span><span>2024 ↗</span></span></a>
+      <a class="tile" href="https://www.linkedin.com/in/kumar-aditya-/recent-activity/images/" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://media.licdn.com/dms/image/v2/D5622AQEesQmGr9NBZg/feedshare-shrink_480/feedshare-shrink_480/0/1726219043557?e=1795651200&amp;v=beta&amp;t=dsndfJRqw5SNho6ywyQJt4gbY7iUbWNCH_TSrI4S8DE" alt="Image from Kumar Aditya’s LinkedIn image gallery, 2024"><span><span>Image post</span><span>2024 ↗</span></span></a>
+      <a class="tile" href="https://www.linkedin.com/in/kumar-aditya-/recent-activity/images/" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://media.licdn.com/dms/image/v2/D5622AQFLIrT1LuVr5A/feedshare-shrink_480/feedshare-shrink_480/0/1726218927670?e=1795651200&amp;v=beta&amp;t=SqOIS-7xMFxxyKv7do9xPUu3Y1rhkKH7FtM1y6MYER0" alt="Image from Kumar Aditya’s LinkedIn image gallery, 2024"><span><span>Image post</span><span>2024 ↗</span></span></a>
+      <a class="tile" href="https://www.linkedin.com/in/kumar-aditya-/recent-activity/images/" target="_blank" rel="noopener noreferrer"><img loading="lazy" src="https://media.licdn.com/dms/image/v2/D5622AQG3xkINu5w7CA/feedshare-shrink_480/feedshare-shrink_480/0/1723552540318?e=1795651200&amp;v=beta&amp;t=rwfbN5AZ6nJRooDe1DtJshKS8hywJdfdtuC1ryy4pvA" alt="Image from Kumar Aditya’s LinkedIn image gallery, 2024"><span><span>Image post</span><span>2024 ↗</span></span></a>
+    </section>
+    <p class="source-note">These are genuine thumbnails surfaced in the LinkedIn images gallery. Each opens the source gallery; LinkedIn does not expose an individual post URL from this view. For permanent, individual project pages, share the original film or campaign links.</p>
+  </main>
+  <footer><div class="wrap">Kumar Aditya — Visual Painter</div></footer>
+  <a class="wa-button" id="whatsapp-contact" href="https://wa.me/919582842843?text=Hi%20%2C%20Kumar%20Aditya%20-%20Visual%20Painter%2F%20DOP%20and%20Creative%20Director%20at%20BAKED%20Media.%20Please%20reach%20out%20about%20potential%20DOP%20or%20camera-unit%20collaborations%20or%20a%20Mentorship%20session%20on%20%22Cinema-Vs-Toolography%20-%20Myths%20and%20Barriers%22.%20%20I'm%20open%20to%20a%20quick%20introduction%20Regards%2C%20Kumar" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp: checking availability" title="Checking availability">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.47-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.28-.2-.57-.35M12 21.8a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.72.97 1-3.62-.24-.37A9.8 9.8 0 1 1 12 21.8M12 0a12 12 0 0 0-10.3 18.1L0 24l6.07-1.6A12 12 0 1 0 12 0"/></svg>
+  </a>
+  <script>
+    (() => {
+      const schedule = {
+        mon: ["09:00", "18:00"], tue: ["09:00", "18:00"],
+        wed: ["09:00", "18:00"], thu: ["09:00", "18:00"],
+        fri: ["09:00", "18:00"], sat: ["10:00", "14:00"],
+        sun: ["10:00", "14:00"]
+      };
+      const days = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+      const toMinutes = time => { const [h, m] = time.split(":").map(Number); return h * 60 + m; };
+      function isOpenNow() {
+        const parts = new Intl.DateTimeFormat("en-GB", {
+          timeZone: "Asia/Calcutta", weekday: "short", hour: "2-digit", minute: "2-digit", hourCycle: "h23"
+        }).formatToParts(new Date());
+        const value = type => parts.find(part => part.type === type)?.value || "";
+        const day = days.indexOf(value("weekday").toLowerCase());
+        const minute = Number(value("hour")) * 60 + Number(value("minute"));
+        const hoursToday = schedule[days[day]];
+        const [start, end] = hoursToday.map(toMinutes);
+        return minute >= start && minute < end;
+      }
+      const button = document.getElementById("whatsapp-contact");
+      function updateStatus() {
+        const label = isOpenNow() ? "Chat with us" : "Closed now, we reply soon !!";
+        button.setAttribute("aria-label", "WhatsApp: " + label);
+        button.title = label;
+      }
+      updateStatus();
+      window.setInterval(updateStatus, 60000);
+    })();
+  </script>
+</body>
+</html>

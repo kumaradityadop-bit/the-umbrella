@@ -1,0 +1,23 @@
+/* The poster cutout sits behind the whole site as a quiet 20% watermark. */
+body{position:relative;isolation:isolate;background:#000!important}
+body::before{content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background-image:url("assets/darkness-photography-cutout.png");background-position:center center;background-size:min(100vw,75vh) auto;background-repeat:no-repeat;opacity:.2}
+.darkness-typewriter{position:fixed;z-index:-1;top:72vh;left:50%;width:min(92vw,1050px);transform:translateX(-50%);pointer-events:none;text-align:center;color:rgba(244,242,237,.42);font:400 clamp(16px,3.25vw,44px)/1.1 Arial,Helvetica,sans-serif;letter-spacing:.11em;text-transform:uppercase;text-shadow:0 2px 18px rgba(0,0,0,.6);white-space:nowrap;overflow:hidden}
+.darkness-typewriter-text::after{content:"";display:inline-block;height:.9em;border-right:1px solid currentColor;margin-left:3px;vertical-align:-.08em;animation:darkness-caret .85s steps(1,end) infinite}
+@keyframes darkness-caret{50%{opacity:0}}
+.darkness-sound-toggle{position:fixed;z-index:9999;left:18px;bottom:18px;padding:9px 12px;border:1px solid rgba(233,230,222,.28);background:rgba(0,0,0,.82);color:rgba(233,230,222,.72);font:600 9px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;backdrop-filter:blur(6px)}
+.darkness-sound-toggle span{color:#e3c68e;margin-left:5px}
+.darkness-sound-toggle:focus-visible{outline:2px solid #e3c68e;outline-offset:3px}
+.intro,.expressions,.cinema,.people,.journal,.book-tease,.contact,.site-footer{background-color:rgba(0,0,0,.38)!important}
+.intro,.cinema,.people,.contact{color:#e9e6de!important}
+.intro :is(.section-label,.about-heading h2,.about-body,.about-signature,.lead,.text-link),
+.cinema :is(.section-label,h2,h3,h4,p,span,a,strong,li),
+.people :is(.section-label,h2,h3,p,span,a,strong),
+.contact :is(.eyebrow,h2,p,a,span){color:#e9e6de!important}
+.intro .section-label,.cinema .section-label,.people .section-label{border-color:rgba(233,230,222,.2)!important}
+.cinema .credit-card{background:rgba(13,13,13,.86)!important;color:#e9e6de!important;border:1px solid rgba(233,230,222,.16)}
+.cinema .credit-type,.cinema .career-stats span,.cinema .collab-heading p,.cinema .collab-grid p,.cinema .network-heading{color:#aaa79f!important}
+.cinema .industry-network,.cinema .collaborators,.cinema .collab-grid article,.cinema .career-stats{border-color:rgba(233,230,222,.2)!important}
+.cinema .partner-list li:after{color:#aaa79f}
+.intro .text-link,.contact-link{border-color:rgba(233,230,222,.28)!important}
+@media(max-width:640px){body::before{background-size:min(100vw,72vh) auto;background-position:center 44%}.darkness-typewriter{top:71vh;width:94vw;font-size:clamp(12px,4vw,20px);letter-spacing:.075em}.darkness-sound-toggle{left:12px;bottom:12px;padding:8px 10px}}
+@media(prefers-reduced-motion:reduce){.darkness-typewriter-text::after{animation:none}}

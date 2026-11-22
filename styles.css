@@ -26,6 +26,22 @@
 @media(hover:none){.hero::after{opacity:.65}}
 @media(prefers-reduced-motion:reduce){.hero::after{transition:none}}
 
+/* Evenly aligned philosophy copy and a quiet crew image sequence */
+.expression-heading{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:end;gap:4vw}
+.expression-heading h2,.expression-heading p{width:100%;max-width:none}
+.expression-heading p{font-size:clamp(14px,1.2vw,17px);line-height:1.8;margin:0 0 .35rem}
+.philosophy-feature{margin:0;position:relative;overflow:hidden;background:#10100f;aspect-ratio:3/1}
+.philosophy-feature img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 48%;filter:brightness(.78);transition:filter .5s,transform 1s}
+.philosophy-feature:hover img{filter:brightness(.94);transform:scale(1.015)}
+.philosophy-feature figcaption{position:absolute;right:2rem;bottom:1.2rem;color:rgba(245,240,226,.75);font:italic clamp(14px,1.7vw,22px)/1.25 var(--serif);text-shadow:0 1px 16px #000}
+.philosophy-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:12px}
+.philosophy-gallery figure{position:relative;margin:0;overflow:hidden;background:#10100f;aspect-ratio:1.42/1}
+.philosophy-gallery img{width:100%;height:100%;display:block;object-fit:cover;filter:brightness(.78) saturate(.82);transition:filter .45s,transform .8s}
+.philosophy-gallery figure:hover img{filter:brightness(1);transform:scale(1.035)}
+.philosophy-gallery figcaption{position:absolute;inset:auto 0 0;padding:2.3rem 1rem .8rem;background:linear-gradient(transparent,rgba(0,0,0,.76));font-size:9px;letter-spacing:.11em;text-transform:uppercase;color:rgba(245,240,226,.84)}
+@media(max-width:760px){.expression-heading{display:block}.expression-heading p{margin-top:1.5rem}.philosophy-feature{aspect-ratio:1.4/1}.philosophy-feature img{object-position:48% center}.philosophy-feature figcaption{right:1rem;bottom:.8rem;max-width:80%;text-align:right}.philosophy-gallery{grid-template-columns:1fr;gap:8px}.philosophy-gallery figure{aspect-ratio:1.55/1}}
+@media(prefers-reduced-motion:reduce){.philosophy-feature img,.philosophy-gallery img{transition:none}}
+
 /* Cinematic motion layers: slow image drift, moving haze, and ink reveal */
 .hero::before{animation:hero-camera-drift 24s ease-in-out infinite alternate;will-change:transform}
 .hero-cinema-light{position:absolute;z-index:1;inset:-16%;pointer-events:none;background:radial-gradient(ellipse at 64% 56%,rgba(255,196,113,.2),transparent 30%),radial-gradient(ellipse at 84% 34%,rgba(104,175,185,.14),transparent 23%),linear-gradient(113deg,transparent 38%,rgba(255,217,157,.045) 48%,transparent 59%);mix-blend-mode:screen;filter:blur(10px);opacity:.68;animation:hero-haze-sweep 16s ease-in-out infinite alternate;will-change:transform,opacity}

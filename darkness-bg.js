@@ -2,6 +2,15 @@
   const textTarget = document.querySelector('.darkness-typewriter-text');
   const soundToggle = document.querySelector('.darkness-sound-toggle');
   if (!textTarget || !soundToggle) return;
+  const typewriter = document.querySelector('.darkness-typewriter');
+  const hero = document.querySelector('.hero');
+
+  if (typewriter && hero && 'IntersectionObserver' in window) {
+    const heroObserver = new IntersectionObserver(([entry]) => {
+      typewriter.classList.toggle('is-away', !entry.isIntersecting);
+    }, { threshold: 0.12 });
+    heroObserver.observe(hero);
+  }
 
   const title = 'DARKNESS OF PHOTOGRAPHY';
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
